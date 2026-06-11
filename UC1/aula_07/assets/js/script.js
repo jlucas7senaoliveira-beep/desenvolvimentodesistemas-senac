@@ -2,7 +2,7 @@
 let status = true
 let acao = prompt ("indique uma ação 0:desativa ou 1: ativa");
 //let confirmar =confirm("deseja realizar a alteração?")
-if(acao!== "" && acao<=1) {
+if(acao!== "" && acao<=1 && acao>=0) {
 
     let confirmar =confirm("deseja alterar o sistema?")
 
@@ -21,9 +21,9 @@ console.log(`voce confirmou a alteração ${acao}`)
 
 
 
- } else {
+    } else {
      alert (" você cancelou a alteração")
     }
-    } else {
-     alert (" você não informou o código de ação")
-    }
+} else {
+    alert (" você não informou o código de ação")
+}
