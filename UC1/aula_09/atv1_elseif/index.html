@@ -1,0 +1,29 @@
+<script>
+    let nome = prompt("digite o nome do aluno:")
+    while (nome !== null) {
+    if (nome !== null && nome !== "") {
+            let nota = prompt("digite a nota do aluno: " + nome);
+
+            console.log(nome)
+            let notanum = Number(nota);
+            if (Number.isfinite(notanum)) {
+
+                if (notanum < 3) {
+                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "REPROVADO")
+                } else if (notanum < 6) {
+                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "RECUPERAÇÃO")
+
+                } else {
+                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "APROVADO")
+                }
+            } else {
+                alert("isso não é um número")
+            }
+
+            
+        } else {
+            alert("nenhum dado registrado")
+        }
+        nome = prompt("digite o nome do aluno:")
+}
+</script>

@@ -1,0 +1,30 @@
+<script>
+let valor= prompt ("digite um valor");
+let acumulado =0
+
+while(valor!==null && valor!=="" ){
+
+if(valor !== null ) {
+
+let valornum = Number(valor)
+      if (Number.isFinite(valornum)) {
+
+// acumulado = acumulado+valor
+acumulado+=valornum
+alert("seu saldo atual é de R$:"+acumulado)
+
+      } else{
+        alert("não é um número")
+      }
+
+
+
+
+    }
+
+   valor= prompt ("digite um valor"); 
+}
+
+
+
+</script>
