@@ -1,29 +1,52 @@
 <script>
-    let nome = prompt("digite o nome do aluno:")
-    while (nome !== null) {
-    if (nome !== null && nome !== "") {
-            let nota = prompt("digite a nota do aluno: " + nome);
 
-            console.log(nome)
-            let notanum = Number(nota);
-            if (Number.isfinite(notanum)) {
+let nome = prompt("Digite o nome do aluno:");
 
-                if (notanum < 3) {
-                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "REPROVADO")
-                } else if (notanum < 6) {
-                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "RECUPERAÇÃO")
+while (nome !== null && nome !== "") {
 
-                } else {
-                    alert("ALUNO:" + nome + "\n NOTA:" + notanum + "|n" + "APROVADO")
-                }
-            } else {
-                alert("isso não é um número")
-            }
+    while (!isNaN(nome)) {
+        alert("Erro! Digite apenas letras para o nome.");
+        nome = prompt("Digite o nome do aluno:");
+    }
 
-            
-        } else {
-            alert("nenhum dado registrado")
-        }
-        nome = prompt("digite o nome do aluno:")
+    console.log("Nome:", nome);
+
+    let nota = prompt("Digite a nota de " + nome);
+
+    while (!Number.isFinite(Number(nota))) {
+        alert("Erro! Digite uma nota válida.");
+        nota = prompt("Digite a nota de " + nome);
+    }
+
+    console.log("Nota digitada:", nota);
+
+    let notanum = Number(nota);
+
+    if (notanum < 3) {
+        alert(
+            "ALUNO: " + nome +
+            "\nNOTA: " + notanum +
+            "\nREPROVADO"
+        );
+    } else if (notanum < 6) {
+        alert(
+            "ALUNO: " + nome +
+            "\nNOTA: " + notanum +
+            "\nRECUPERAÇÃO"
+        );
+    } else {
+        alert(
+            "ALUNO: " + nome +
+            "\nNOTA: " + notanum +
+            "\nAPROVADO"
+        );
+
+    }
+    nome = prompt("Digite o nome do próximo aluno:");
+
 }
+
+console.log("Programa encerrado.");
+alert("Programa encerrado.");
+
 </script>
