@@ -1,0 +1,35 @@
+<script>
+
+let nomes = [
+    "PAULA LINS",
+    "JOSE IEDO",
+    "FRANCISCO ANTÔNIO",
+    "FRANCISCA LINS"
+];
+
+let option = Number(prompt("Selecione um cliente (digite o código de 1 a " + nomes.length + ")"));
+
+while (
+    !Number.isInteger(option) ||
+    option <= 0 ||
+    option > nomes.length
+) {
+
+    alert("Erro! Digite um código válido.");
+
+    option = Number(prompt("Selecione um cliente (digite o código de 1 a " + nomes.length + ")"));
+}
+
+let novonum = option - 1;
+
+alert(`
+DADOS DO USUÁRIO
+=====================
+
+VOCÊ SELECIONOU:
+
+NOME: ${nomes[novonum]}
+`);
+
+
+</script>
