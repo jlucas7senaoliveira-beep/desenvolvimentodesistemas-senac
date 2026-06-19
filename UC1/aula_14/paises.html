@@ -1,0 +1,23 @@
+<script>
+let animais = [
+"cavalo",
+"cachorro",
+"macaco"
+]
+let icons =[
+"🐎",
+"🐶",
+"🙊🙉🙈"
+]
+let resultado= "lista de animais"
+resultado +="\n"
+animais.forEach (function(nomeanimal,i){
+
+ resultado += `${icons[i]} ${i}. ${nomeanimal} posição: ${i}\n `
+
+})
+
+
+alert(resultado)
+
+</script>

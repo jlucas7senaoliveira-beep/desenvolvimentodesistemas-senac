@@ -1,0 +1,24 @@
+<script>
+let produtos= [
+    "computadores",
+    "monitores",
+    "teclado",
+    "mouse"
+]
+let icones =[
+"🖥️",
+"📺",
+"⌨️",
+"🖱️"
+]
+
+
+let resultado = "lista de produtos "
+resultado+= "\n";
+produtos.forEach( function (nomeproduto,i){
+
+resultado +=`${icones[i]} ${i}. ${nomeproduto}\n posição: ${i}\n`
+    
+})
+alert(resultado)
+</script>
