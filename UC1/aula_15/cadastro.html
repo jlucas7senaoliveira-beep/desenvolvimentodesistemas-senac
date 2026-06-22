@@ -1,0 +1,51 @@
+<script>
+    let nomes = [ ]
+
+let option1 = Number (prompt (`
+DIGITE:\n
+1.Para adcionar cliente.
+2.Para excluir cliente
+0.Para sair`))
+
+while(option1 !== 0){
+
+if( option1 === 1){
+let novonome=prompt("digite o nome do cliente:\n\nCancelar voltar para o menu")
+while(novonome!==null){
+
+nomes.push(novonome)
+alert ("clliente adicionado")
+alert (nomes)
+novonome=prompt("digite o nome do cliente:\n\nCancelar voltar para o menu")
+}
+
+}else if(option1===2){
+    let excluir = prompt ("digite o nome que deseja excluir:\n cancelar para voltar para o menu")
+    
+    while(excluir!==null){
+        let posição = nomes.indexOf(excluir)
+    if (posição!==-1){
+nomes.splice(posição,1)
+alert ("cliente removido!")
+
+    }else{
+alert ("cliente não encontrado!")
+    } alert (nomes)
+    excluir = prompt ("digite o nome que deseja excluir:\n cancelar para voltar para o menu")
+    }
+}else{ alert ("opção invalida!")
+
+}
+option1 = Number (prompt(`
+DIGITE:
+
+1. Para adicionar cliente
+2. Para excluir cliente
+0. Para sair`
+
+))
+}
+alert ("programa encerrado")
+
+
+</script>

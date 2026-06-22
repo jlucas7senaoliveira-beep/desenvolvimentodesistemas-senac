@@ -1,5 +1,66 @@
 <script>
 
+let nomes = [ ];
 
-    
+let option1 = Number(prompt(`
+DIGITE:
+
+1. Para adicionar cliente
+2. Para excluir cliente
+0. Para sair
+`));
+
+while (option1 !== 0) {
+
+    if (option1 === 1) {
+
+        let novoNome = prompt(
+            "Digite o nome do cliente.\n\nCancelar para voltar ao menu."
+        );
+
+        while (novoNome !== null) {
+
+            nomes.push(novoNome);
+
+            alert("Cliente adicionado!");
+            alert(nomes);
+
+            novoNome = prompt(
+                "Digite outro nome.\n\nCancelar para voltar ao menu."
+            );
+        }
+
+    } else if (option1 === 2) {
+
+        let excluir = prompt("Digite o nome que deseja excluir:");
+
+        let posicao = nomes.indexOf(excluir);
+
+        if (posicao !== -1) {
+            nomes.splice(posicao, 1);
+            alert("Cliente removido!");
+        } else {
+            alert("Cliente não encontrado!");
+        }
+
+        alert(nomes);
+
+    } else {
+
+        alert("Opção inválida!");
+
+    }
+
+    option1 = Number (prompt(`
+DIGITE:
+
+1. Para adicionar cliente
+2. Para excluir cliente
+0. Para sair
+`));
+
+}
+
+alert("Programa encerrado!");
+
 </script>
