@@ -1,0 +1,20 @@
+<script>
+function CalcularPrecoVenda(custo,percentual){
+let lucro = custo*percentual/100
+    let PrecoVenda = custo+ lucro
+return PrecoVenda
+
+}
+let custo = Number (prompt ("digite o valor de custo"))
+
+while(isNaN(custo)|| custo<= 0 ){
+custo = Number(prompt ("Erro!Digite um numero maior que zero!"))
+}
+let percentual = Number(prompt("Digite o percentual do lucro"))
+
+while(isNaN(percentual)|| percentual< 0){
+percentual = Number(prompt("Erro!digite um percentual de numero valido:"))
+}
+let precofinal = CalcularPrecoVenda(custo,percentual)
+alert (`Preço de venda: R$ ${precofinal.toFixed(2)}`)
+</script>

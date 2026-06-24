@@ -1,0 +1,34 @@
+<script>
+
+function calcularDesconto(valorCompra, percentualDesconto){
+    let valorDesconto = valorCompra * percentualDesconto / 100;
+    let valorFinal = valorCompra - valorDesconto;
+
+    return [valorDesconto, valorFinal];
+}
+
+let valorCompra = Number(prompt("Digite o valor da compra:"));
+
+while(isNaN(valorCompra) || valorCompra <= 0){
+    valorCompra = Number(prompt("Erro! Digite um valor maior que zero:"));
+}
+
+let percentualDesconto = Number(prompt("Digite o percentual de desconto:"));
+
+while(isNaN(percentualDesconto) || percentualDesconto < 0){
+    percentualDesconto = Number(prompt("Erro! Digite um percentual válido:"));
+}
+
+let resultado = calcularDesconto(valorCompra, percentualDesconto);
+
+let desconto = resultado[0];
+let valorFinal = resultado[1];
+
+alert(
+`Valor da compra: R$ ${valorCompra.toFixed(2)}
+Desconto: R$ ${desconto.toFixed(2)}
+Valor final: R$ ${valorFinal.toFixed(2)}`
+);
+</script>
+
+
