@@ -1,0 +1,33 @@
+<script>
+function acessarConta (senhadigitada,senhaCorreta,titular,saldo,status){
+if (senhadigitada===senhaCorreta){
+
+    return `Titular:${titular}
+    Saldo R$: ${saldo.toFixed(2)}
+    Status:${status}`
+}
+return"Senha incoreta!"
+
+}
+let titular= "João Lucas";
+let saldo= 1500;
+let senhaCorreta="1234";
+let status= "ativa";
+
+let tentativas= 3;
+let senhadigitada;
+
+while(tentativas>0){
+senhadigitada= prompt(`Digite sua senha\n Tentativas restantes: ${tentativas} `)
+if(senhadigitada===senhaCorreta){
+alert (acessarConta (senhadigitada,senhaCorreta,titular,saldo,status))
+break;
+}
+tentativas--;
+
+}
+if (tentativas=== 0){
+    alert ("Conta Bloqueada!")
+}
+
+</script>
